@@ -15,9 +15,6 @@ import {
   import PropTypes from 'prop-types'
   function BotCollection({botData,isLoading,onEnlist}) {
    
-    // const handleClick = ()=>{
-    //   const enlistedBot =
-    // }
   
     return (
       <>  
@@ -41,48 +38,57 @@ import {
             <Spinner
               thickness="4px"
               speed="0.65s"
-              emptyColor="gray.200"
-              color="blue.500"
+              emptyColor="gray.100" 
+              color="teal.500" 
               size="xl"
+              mx="auto" 
+              mt="4" 
             />
-            <Text>Please wait, Loading data..</Text>
+            <Text>Your data will be here shortly..</Text>
           </Flex>
         ) : (
           botData.map((data, index) => {
             return (
               <Card
-                boxShadow="2xl"
-                borderTop="4px solid #3182CE"
-                p="6"
-                rounded="md"
-                direction={{ base: "column", sm: "row" }}
-                overflow="hidden"
-                variant="outline"
-                key={index}
-              >
-                <Image
-                  objectFit="cover"
-                  maxW={{ base: "100%",md:"40%", sm: "200px" }}
-                  src={data.avatar_url}
-                  alt="Caffe Latte"
-                />
-  
-                <Stack>
-                  <CardBody >
-                    <Heading textTransform={"uppercase"} size="md">Name: {data.name}</Heading>
-                    <Heading textTransform={"lowercase"} py="2" size="sm">Bot class: {data.bot_class}</Heading>              
-                    <Text>Identification: {data.id} </Text>
-                  </CardBody>
-  
-                  <CardFooter>
-                    <Button variant="solid" colorScheme="blue"
-                    onClick={()=> onEnlist(data.id)}
-                    >
-                      Enlist
-                    </Button>
-                  </CardFooter>
-                </Stack>
-              </Card>
+      boxShadow="dark-lg" // Change the boxShadow to "dark-lg" for a darker shadow
+      borderTop="4px solid #3182CE"
+      p="5" // Reduce the padding
+      rounded="lg"
+      direction={{ base: "column", sm: "row" }}
+      overflow="hidden"
+      variant="outline"
+      key={index}
+      _hover={{ transform: 'scale(1.05)', transition: 'transform 0.5s ease' }} // Add a hover effect
+    >
+      <Image
+        objectFit="cover"
+        maxW={{ base: "100%", md: "40%", sm: "200px" }}
+        src={data.avatar_url}
+        alt={data.name}
+      />
+
+      <Stack>
+        <CardBody>
+          <Heading textTransform="uppercase" size="md">
+            Name: {data.name}
+          </Heading>
+          <Heading textTransform="lowercase" py="2" size="sm">
+            Bot class: {data.bot_class}
+          </Heading>
+          <Text>Identification: {data.id}</Text>
+        </CardBody>
+
+        <CardFooter>
+          <Button
+            variant="solid"
+            colorScheme="green"
+            onClick={() => onEnlist(data.id)}
+          >
+            Enlist
+          </Button>
+        </CardFooter>
+      </Stack>
+    </Card>
             );
           })
         )}
