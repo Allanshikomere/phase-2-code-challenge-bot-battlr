@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import BotCollection from "./components/BotCollection";
-import YourBotArmy from "./components/YourBotArmy";
-import Navbar from "./components/NavBar";
+import BotCollection from "./components/botcollection";
+import YourBotArmy from "./components/botarmy";
+import Navbar from "./components/navbar";
 import { Routes, Route } from "react-router-dom";
 
 function BotLayout() {

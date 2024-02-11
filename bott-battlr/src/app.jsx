@@ -1,6 +1,6 @@
-import BotLayout from "./BotLayout";
+import BotLayout from "./botlayout";
 import { BrowserRouter } from "react-router-dom";
-// import BotCollection from "./components/BotCollection"
+// import botCollection from "./components/botCollection"
 
 function App() {
   return (
