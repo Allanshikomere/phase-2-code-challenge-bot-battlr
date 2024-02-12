@@ -16,7 +16,7 @@ function Navbar() {
     >
       <Flex fontSize="lg" fontWeight="bold" gap="20px">
         <NavLink to="/">Botcollection</NavLink>
-        <NavLink to="/YourBotArmy">YourBotarmy</NavLink>
+        <NavLink to="/YourBotArmy">Botarmy</NavLink>
       </Flex>
     </Flex>
   );
