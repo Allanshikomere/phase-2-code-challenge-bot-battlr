@@ -50,15 +50,15 @@ import {
           botData.map((data, index) => {
             return (
               <Card
-      boxShadow="dark-lg" // Change the boxShadow to "dark-lg" for a darker shadow
+      boxShadow="dark-lg" 
       borderTop="4px solid #3182CE"
-      p="5" // Reduce the padding
+      p="5" 
       rounded="lg"
       direction={{ base: "column", sm: "row" }}
       overflow="hidden"
       variant="outline"
       key={index}
-      _hover={{ transform: 'scale(1.05)', transition: 'transform 0.5s ease' }} // Add a hover effect
+      _hover={{ transform: 'scale(1.05)', transition: 'transform 0.5s ease' }} 
     >
       <Image
         objectFit="cover"
